@@ -46,3 +46,11 @@ function calcularValor($productos, $cantidad, $valor) {
     }
     return $valorTotal;
 }
+
+function listarModelos($productos, $modelo){
+    $result= '';
+    foreach ($productos as $producto){
+        $result .= "Modelo: ".$producto['modelo']. "<br>";
+    }
+    return $result;
+}
