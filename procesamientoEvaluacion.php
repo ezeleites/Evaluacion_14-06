@@ -19,3 +19,11 @@ function buscarPorModelo($productos, $modelo){
     }
     return "Producto no encotrado";
 }
+
+function mostrarProductos ($productos){
+    $result = '';
+    foreach ($productos as $producto){
+        $result .= "Nombre: ".$producto['nombre'].", Cantidad: ".$producto['cantidad'].", Valor: ".$producto['valor']. ", Modelo: ".$producto['modelo']. "<br>";
+    }
+    return $result;
+}
