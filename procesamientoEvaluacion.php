@@ -27,3 +27,22 @@ function mostrarProductos ($productos){
     }
     return $result;
 }
+
+function actualizarProducto ($productos,$nombre,$cantidad,$valor,$modelo){
+    foreach ($productos as $producto){
+        if($producto['nombre'] == $nombre && $producto['modelo'] == $modelo){
+            $producto['cantidad'] = $cantidad;
+            $producto['valor'] = $valor;
+            break;
+        }
+    }
+    return $producto;
+}
+
+function calcularValor($productos, $cantidad, $valor) {
+    $valorTotal = 0;
+    for ($i = 0; $i < count($productos); $i++) {
+        $valorTotal += ($cantidad[$i] * $valor);
+    }
+    return $valorTotal;
+}
