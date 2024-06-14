@@ -10,3 +10,12 @@ function agregarProductos($productos,$nombre,$cantidad,$valor,$modelo){
     ];
     return $productos;
 }
+
+function buscarPorModelo($productos, $modelo){
+    foreach ($productos as $producto){
+        if($producto['modelo'] == $modelo){
+            return "Nombre: ".$producto['nombre']."<br>"; 
+        }
+    }
+    return "Producto no encotrado";
+}
